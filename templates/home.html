@@ -1,6 +1,6 @@
 <h1>Message Board Homepage</h1>
 <ul>
-    {% for post in all_posts_list %}
-    <li>{{ post }}</li>
+    {% for post in all_posts_list %} <!-- for loop usage within django-html-->
+    <li>{{ post }}</li>              <!-- referencing variables within django-html -->
     {% endfor %}
 </ul>

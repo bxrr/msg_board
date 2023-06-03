@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-(&q8&yiz&2d7sa1zzfwqfvf@hrl*t%=1n0g!hnxz=ts0b=8(zl
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*'] # '*' to specify that all hosts are allowed
 
 
 # Application definition
@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'posts.apps.PostsConfig'
+    'django.contrib.staticfiles', 
+    'posts.apps.PostsConfig' # need to add app configs created in project
 ]
 
 MIDDLEWARE = [
@@ -56,7 +56,7 @@ ROOT_URLCONF = 'msg_board.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')], # need to include project level templates folder
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
